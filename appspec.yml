@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 
 files:
-  - source: /awspipelinedemo.war
-    destination: /opt/tomcat/webapps/
+  - source: /
+    destination: /home/ec2-user/apache-tomcat-9.0.65/webapps
   - source: /TestXMLFile.xml
-    destination: /opt/tomcat/webapps/
+    destination: /home/ec2-user/apache-tomcat-9.0.65/webapps
     
 file_exists_behavior: OVERWRITE    
           
