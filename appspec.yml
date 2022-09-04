@@ -3,18 +3,18 @@ os: linux
 
 files:
   - source: /*
-    destination: /home/ec2-user/apache-tomcat-9.0.65/webapps
+    destination: /opt/tomcat/webapps/
   - source: /TestXMLFile.xml
-    destination: /home/ec2-user/apache-tomcat-9.0.65/webapps
+    destination: /opt/tomcat/webapps/
     
 file_exists_behavior: OVERWRITE    
           
 hooks:
   AfterInstall:
-    - location: scripts/server_start.sh
+    - location: server_start.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/server_stop.sh
+    - location: server_stop.sh
       timeout: 300
       runas: root 
