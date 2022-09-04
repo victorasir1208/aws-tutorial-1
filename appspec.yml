@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /*
+  - source: /awspipelinedemo.war
     destination: /opt/tomcat/webapps/
   - source: /TestXMLFile.xml
     destination: /opt/tomcat/webapps/
