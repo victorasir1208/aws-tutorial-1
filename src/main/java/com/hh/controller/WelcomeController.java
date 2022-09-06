@@ -29,7 +29,7 @@ public class WelcomeController {
     // /hello?name=kotlin
     @GetMapping("/hello")
     public String mainWithParam(
-            @RequestParam(name = "name", required = false, defaultValue = "") String name, Model model) {
+            @RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
 
         model.addAttribute("message", name);
 
